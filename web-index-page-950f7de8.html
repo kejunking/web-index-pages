@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日常查询 · 对照延伸 · ayx 介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f3f0;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #1e1c1a;
+        }
+
+        .hero {
+            background: #1f2b36;
+            background: linear-gradient(145deg, #1f2b36 0%, #0f171f 100%);
+            color: #eae7e1;
+            padding: 3.5rem 1.5rem;
+            text-align: center;
+            border-bottom: 3px solid #be7b4b;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            max-width: 640px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .hero .emblem {
+            margin-top: 2rem;
+            display: inline-block;
+            background: rgba(190, 123, 75, 0.25);
+            padding: 0.4rem 1.2rem;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            color: #d6b595;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            border-left: 4px solid #be7b4b;
+            padding-left: 1rem;
+            margin-bottom: 1.8rem;
+            color: #1e2a33;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            margin-bottom: 2.8rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.8rem 1.6rem;
+            flex: 1 1 220px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.05);
+            transition: transform 0.15s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.6rem;
+            color: #2c3a44;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #3e3b37;
+        }
+
+        .card .tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            background: #ebe7e0;
+            color: #2e3b44;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            margin-top: 0.6rem;
+        }
+
+        .scenario-list {
+            background: white;
+            border-radius: 20px;
+            padding: 1.8rem 2rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .scenario-list ul {
+            list-style: none;
+        }
+
+        .scenario-list li {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #efebe6;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .scenario-list li:last-child {
+            border-bottom: 0;
+        }
+
+        .scenario-list .emoji {
+            font-size: 1.3rem;
+            min-width: 2.2rem;
+        }
+
+        .note-box {
+            background: #f0ede8;
+            border-radius: 16px;
+            padding: 1.8rem 2rem;
+            margin: 2.8rem 0 1.5rem;
+            border-left: 4px solid #be7b4b;
+        }
+
+        .note-box strong {
+            color: #1f2b36;
+        }
+
+        .faq-mini {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 1.2rem 1.5rem;
+            border-radius: 14px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+        }
+
+        .faq-item .q {
+            font-weight: 500;
+            color: #1f2b36;
+            margin-bottom: 0.3rem;
+        }
+
+        .faq-item .a {
+            font-size: 0.92rem;
+            color: #504b45;
+        }
+
+        a {
+            color: #be7b4b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #8f5f38;
+            text-decoration-thickness: 2px;
+        }
+
+        .footer-note {
+            margin-top: 4rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #7e7870;
+            border-top: 1px solid #dbd5cc;
+            padding-top: 2rem;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.8rem; }
+            .faq-mini { grid-template-columns: 1fr; }
+            .cards { flex-direction: column; }
+            .scenario-list { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>日常查询 &amp; 对照延伸</h1>
+        <p class="sub">琐碎信息总有出处，零散发现常需对照——<br>一个安静的信息索引，陪你在资料与想法之间来回走走。</p>
+        <span class="emblem">· 从一次查询开始 ·</span>
+    </section>
+
+    <div class="container">
+        <!-- 摘要 -->
+        <div style="margin-bottom: 2.2rem; font-size: 1.05rem; background: #fcfaf7; padding: 1.2rem 1.8rem; border-radius: 40px; color: #2a333b;">
+            ｜ 所谓信息检索，很多时候不过是：想起一个词，想确认它的背景；看到一段话，想看看上下文；读到某个观点，想找找不同来源的表述。而 <a href="https://web-index-ayx.com">ayx</a> 提供的就是这样一个朴素的起点——页面简洁，指向明确，不打断你的思路。
+        </div>
+
+        <!-- 亮点 cards -->
+        <h2 class="section-title">几个顺手的地方</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>对照阅读</h3>
+                <p>同一个概念在不同语境下的表达，并列呈现。适合写稿、翻译、整理笔记时快速比对。</p>
+                <span class="tag">平行参照</span>
+            </div>
+            <div class="card">
+                <h3>延伸探索</h3>
+                <p>从一条记录跳到关联条目，不依赖算法推荐，而是靠内容本身的交叉链接。</p>
+                <span class="tag">自然导航</span>
+            </div>
+            <div class="card">
+                <h3>低干扰界面</h3>
+                <p>没有弹窗、没有浮层、没有闪烁的催促。信息在前，装饰在后。</p>
+                <span class="tag">安静工具</span>
+            </div>
+        </div>
+
+        <!-- 场景 → 日常查询、对照、延伸阅读 -->
+        <h2 class="section-title">实际场景里它是这样被用到的</h2>
+        <div class="scenario-list">
+            <ul>
+                <li><span class="emoji">📖</span> <span><strong>读书遇到冷门术语</strong> —— 打开 <a href="https://web-index-ayx.com">ayx</a> 快速定位背景词条，读完解释再回到原文，不用反复切标签页。</span></li>
+                <li><span class="emoji">🗂️</span> <span><strong>资料整理时做交叉比对</strong> —— 把一条信息放在左侧，右侧打开索引，逐条核实出处和定义，效率高于无序搜索。</span></li>
+                <li><span class="emoji">🌐</span> <span><strong>浏览外文内容后对照中文常用译法</strong> —— 人名、机构名、技术名词，看看不同资料里怎么写，避免同一篇文章里前后不一致。</span></li>
+                <li><span class="emoji">📝</span> <span><strong>写稿间隙快速回溯</strong> —— 不确定某个日期或数据，回索引里翻一下，比临时翻书或重新搜索更集中。</span></li>
+            </ul>
+        </div>
+
+        <!-- 使用建议 & 可信但克制的说明 -->
+        <div class="note-box">
+            <strong>一点使用建议</strong> · 如果是第一次接触，可以从你最常关注的主题入手——先查一个你熟悉的名词，看看索引里的组织和链接方式，慢慢就会形成自己的浏览习惯。它不会追踪你的行为，也没有个性化推送，所有的延伸都需要你主动点击。
+        </div>
+
+        <div class="note-box" style="border-left-color: #7f8c8a; background: #f5f2ed;">
+            <strong>关于信息参考</strong> · 索引中的内容主要来自可公开访问的资料来源，并经过基础校对与归类。但它不是专业数据库，也不替代原始文献。在需要精确引用的场合，建议回到一手出处核对细节。我们认为这是对信息使用者最基本的尊重。
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <h2 class="section-title" style="margin-top: 2.8rem;">常见疑问（摘要）</h2>
+        <div class="faq-mini">
+            <div class="faq-item">
+                <div class="q">收录范围有多大？</div>
+                <div class="a">目前集中在人文、社会、技术领域的基础条目，日常查询频率较高的主题优先补充，规模持续增加但不追求大而全。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">需要注册或登录吗？</div>
+                <div class="a">不需要。整个页面内容和索引结构对所有访客开放，没有用户系统，也不记录浏览历史。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">内容会更新吗？</div>
+                <div class="a">会，但节奏偏慢——我们更在意准确性而非速度。如果你发现错误或遗漏，可以通过页面底部的反馈渠道告知。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">手机上好用吗？</div>
+                <div class="a">适配了常见屏幕尺寸，卡片和列表在窄屏上会纵向排列，链接间距也做了可点按优化。</div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <a href="https://web-index-ayx.com">ayx</a> · 一个面向日常查询与对照延伸的信息索引
+        </div>
+    </div>
+</body>
+</html>
