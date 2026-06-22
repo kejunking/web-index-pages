@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pp体育 · 故事从入口开始</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f4f6fa;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        /* 深色头图 —— 故事开场 */
+        .hero {
+            background: linear-gradient(135deg, #0b1121 0%, #1a263a 60%, #1f3a4f 100%);
+            color: #e4eaf1;
+            padding: 3.2rem 1.5rem 2.8rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #9bb8e0, #5f8ec9, #3b6ea5);
+            opacity: 0.5;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 0.6rem;
+        }
+        .hero .sub {
+            font-size: 1.2rem;
+            color: #b8cae0;
+            font-weight: 300;
+            max-width: 580px;
+            margin: 0 auto 1.2rem;
+        }
+        .hero .opener {
+            font-size: 1rem;
+            color: #a7bbd5;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 1.6rem;
+            margin-top: 1rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 浅色正文区 —— 承接段落 */
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2.4rem 1.5rem 3.2rem;
+        }
+        .intro-card {
+            background: #ffffff;
+            border-radius: 1.2rem;
+            padding: 2.2rem 2rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+            margin-bottom: 2.4rem;
+        }
+
+        .intro-card p {
+            margin-bottom: 1.2rem;
+        }
+        .intro-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-link {
+            color: #2563eb;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .highlight-link:hover {
+            color: #1e40af;
+            border-bottom-color: #2563eb;
+        }
+
+        /* 特点列表 —— 四点，卡片风格 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.8rem 0 1.2rem;
+        }
+        .feature-item {
+            background: #f8fafc;
+            border-radius: 1rem;
+            padding: 1.2rem 1.2rem 1.2rem 1.7rem;
+            border-left: 4px solid #3b6ea5;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+            transition: transform 0.15s, background 0.15s;
+        }
+        .feature-item:hover {
+            background: #eef3fa;
+            transform: translateY(-2px);
+        }
+        .feature-item strong {
+            display: block;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #0f1a2e;
+            margin-bottom: 0.3rem;
+        }
+        .feature-item span {
+            font-size: 0.93rem;
+            color: #334155;
+        }
+
+        /* 温和结尾 */
+        .gentle-closing {
+            background: #eef3fa;
+            border-radius: 1rem;
+            padding: 1.8rem 2rem;
+            margin-top: 2.2rem;
+            text-align: center;
+            border: 1px solid #dce5ee;
+        }
+        .gentle-closing p {
+            margin-bottom: 0.6rem;
+        }
+        .gentle-closing .small-note {
+            font-size: 0.9rem;
+            color: #4b5b6e;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero .sub {
+                font-size: 1rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 0.9rem;
+            }
+            .intro-card {
+                padding: 1.6rem 1.2rem;
+            }
+            .gentle-closing {
+                padding: 1.4rem 1.2rem;
+            }
+        }
+        @media (max-width: 420px) {
+            .hero {
+                padding: 2.2rem 1rem 1.8rem;
+            }
+            .container {
+                padding: 1.6rem 1rem 2.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <h1>pp体育 · 入口即故事</h1>
+    <p class="sub">没有复杂的跳转，只有直接抵达的现场</p>
+    <div class="opener">
+        每一次打开，都像推开一扇熟悉的门。<br>
+        稳定、安静、不打扰。
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="intro-card">
+        <p>
+            在信息过载的数字世界里，一个可靠的入口往往比功能堆叠更珍贵。对于经常关注体育内容的人来说，<a href="https://main-ppsport.com" class="highlight-link">pp体育</a> 一直保持着一种简洁而克制的姿态：它不试图用弹窗和横幅吸引你，而是把选择权放在你手里。
+        </p>
+        <p>
+            页面加载的节奏、导航的层级、内容区块的权重——这些细节共同构成一种「无感」的使用体验。你不需要学习如何操作，因为一切都遵循直觉。而这种直觉，正是经过大量迭代后沉淀下来的界面语言。
+        </p>
+    </div>
+
+    <div class="intro-card">
+        <p><strong>从使用场景来看，pp体育 在几个维度上形成了自己的特征：</strong></p>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <strong>直达性</strong>
+                <span>首页结构扁平，核心内容在一屏内即可触及，减少无效点击路径。</span>
+            </div>
+            <div class="feature-item">
+                <strong>视觉洁净</strong>
+                <span>字体层级清晰，留白充足，信息密度被控制在舒适范围内。</span>
+            </div>
+            <div class="feature-item">
+                <strong>跨屏一致</strong>
+                <span>从桌面到移动端，布局逻辑自然衔接，不牺牲可读性。</span>
+            </div>
+            <div class="feature-item">
+                <strong>低认知负荷</strong>
+                <span>每个按钮、每个链接的文本都经过精简，用户不必停下来思考。</span>
+            </div>
+        </div>
+        <p style="margin-top: 1rem;">
+            这些特征并非来自某个单一的设计决策，而是长期对「入口体验」持续优化的结果。好的入口不追求惊艳，而是在无数个日常瞬间里保持稳定。
+        </p>
+    </div>
+
+    <div class="intro-card">
+        <p>
+            对内容的组织方式，也反映了对阅读节奏的理解。没有用夸张的轮播图或自动播放的视频去抢占注意力，而是通过清晰的分类卡片和文字摘要，让用户自行决定下一步。这种设计哲学，在当下格外稀缺。
+        </p>
+        <p>
+            如果你还没有感受过这种叙事，不妨直接打开 <a href="https://main-ppsport.com" class="highlight-link">pp体育</a>，从首页的结构里体会那种被谨慎对待的浏览感。它不是一个需要「学习」的工具，而是一个可以「使用」的场所。
+        </p>
+    </div>
+
+    <div class="gentle-closing">
+        <p>互联网上从不缺少喧嚣的入口，但少有不急不躁的引路者。</p>
+        <p>pp体育 选择了后者。</p>
+        <p class="small-note">—— 一个关于稳定与克制的简短笔记</p>
+    </div>
+
+</main>
+
+</body>
+</html>
